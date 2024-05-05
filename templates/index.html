@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>Object detection</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<script src="{{ url_for('static', filename='js/platform.js') }}" type="text/javascript" defer></script>
+		<script src="{{ url_for('static', filename='js/video-stream.js') }}" type="text/javascript" defer></script>
+		<script src="{{ url_for('static', filename='js/object-detection.js') }}" type="text/javascript" defer></script>
+		<script src="{{ url_for('static', filename='js/presentation.js') }}" type="text/javascript" defer></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript" defer></script>
+	</head>
+	<body>
+		<div class="playback">
+			<div class="screen">
+				<canvas id="detected-objects" width="0" height="0"></canvas>
+				<video autoplay muted></video>
+			</div>
+
+			<div class="camera-dialog">
+				<div class="camera-error hidden">
+					<h1>Error</h1>
+					<p class="error-description"></p>
+				</div>
+				<div class="desktop-camera-choose hidden">
+					<select name="" id="" class="desktop-camera-select">
+						<option value="">Select camera</option>
+					</select>
+					<button id="desktop-start-button">Start</button>
+				</div>
+			</div>
+
+			<button id="mobile-camera-toggle" class="hidden"></button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+object_detect/__pycache__/
+
+# Virtual enviroment
+.venv/
+
+# IDE directories
+.vscode/
+.vs/
+.idea/
+
+# File backups
+*.kate-swp
+*~
+
+# SSL certificates
+certs/*.crt
+certs/*.key
+
+# Object recognition models
+object_detect/models/*.pt
+object_detect/models/*.h5

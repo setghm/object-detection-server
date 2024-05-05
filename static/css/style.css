@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.playback {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playback .screen {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playback .screen video {
+    width: 100%;
+    height: 100%;
+}
+
+.playback .screen canvas {
+    position: absolute;
+}
+
+.camera-dialog {
+    position: absolute;
+}
+
+.camera-error {
+    color: white;
+    text-align: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#mobile-camera-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    padding: 8px;
+    border-radius: 50%;
+    width: 48px;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid white;
+    background-image: url(../icons/camera-switch.svg);
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-color: white;
+
+    transition: all 0.2s ease;
+}
+
+#mobile-camera-toggle:active {
+    padding: 4px;
+    transform: rotateZ(90deg);
+}
+
+.hidden {
+    display: none !important;
+}
